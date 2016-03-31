@@ -32,14 +32,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_marginTop="52dp"
         android:textStyle="bold"
         android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp"
         android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -48,9 +49,10 @@
         android:text="2"
         android:id="@+id/button2"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:layout_toEndOf="@+id/button1"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -61,7 +63,8 @@
         android:textStyle="bold"
         android:layout_alignBottom="@+id/button2"
         android:layout_toRightOf="@+id/button2"
-        android:layout_toEndOf="@+id/button2" />
+        android:layout_toEndOf="@+id/button2"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -70,9 +73,10 @@
         android:text="4"
         android:id="@+id/button4"
         android:textStyle="bold"
-        android:layout_below="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -81,9 +85,10 @@
         android:text="6"
         android:id="@+id/button5"
         android:textStyle="bold"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/button1"
         android:layout_alignRight="@+id/button3"
-        android:layout_alignEnd="@+id/button3" />
+        android:layout_alignEnd="@+id/button3"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -94,7 +99,8 @@
         android:textStyle="bold"
         android:layout_alignTop="@+id/button4"
         android:layout_toRightOf="@+id/button4"
-        android:layout_toEndOf="@+id/button4" />
+        android:layout_toEndOf="@+id/button4"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -105,7 +111,8 @@
         android:textStyle="bold"
         android:layout_below="@+id/button4"
         android:layout_toRightOf="@+id/button4"
-        android:layout_toEndOf="@+id/button4" />
+        android:layout_toEndOf="@+id/button4"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -116,7 +123,8 @@
         android:textStyle="bold"
         android:layout_below="@+id/button4"
         android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4" />
+        android:layout_alignStart="@+id/button4"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -127,7 +135,8 @@
         android:textStyle="bold"
         android:layout_below="@+id/button5"
         android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5" />
+        android:layout_alignStart="@+id/button5"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -138,7 +147,8 @@
         android:textStyle="bold"
         android:layout_below="@+id/button7"
         android:layout_alignLeft="@+id/button8"
-        android:layout_alignStart="@+id/button8" />
+        android:layout_alignStart="@+id/button8"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -149,7 +159,8 @@
         android:textStyle="bold"
         android:layout_alignBottom="@+id/button0"
         android:layout_toRightOf="@+id/button0"
-        android:layout_toEndOf="@+id/button0" />
+        android:layout_toEndOf="@+id/button0"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -160,7 +171,8 @@
         android:textStyle="bold"
         android:layout_alignTop="@+id/button_dot"
         android:layout_toRightOf="@+id/button_dot"
-        android:layout_toEndOf="@+id/button_dot" />
+        android:layout_toEndOf="@+id/button_dot"
+        android:onClick="Btn_Create"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -172,6 +184,68 @@
         android:layout_alignBottom="@+id/button_multi"
         android:layout_toRightOf="@+id/button_multi"
         android:layout_toEndOf="@+id/button_multi"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:onClick="Btn_Create"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:id="@+id/button_Cancel"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:onClick="Btn_Create"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_plus"
+        android:textStyle="bold"
+        android:layout_below="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:onClick="Btn_Create"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button_Minus"
+        android:textStyle="bold"
+        android:layout_below="@+id/button_plus"
+        android:layout_alignLeft="@+id/button_div"
+        android:layout_alignStart="@+id/button_div"
+        android:onClick="Btn_Create"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:id="@+id/button_leftBr"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/button_Cancel"
+        android:layout_toRightOf="@+id/button_Cancel"
+        android:layout_toEndOf="@+id/button_Cancel"
+        android:onClick="Btn_Create"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=")"
+        android:id="@+id/button_RightBr"
+        android:textStyle="bold"
+        android:layout_below="@+id/button_Cancel"
+        android:layout_toRightOf="@+id/button_Cancel"
+        android:layout_toEndOf="@+id/button_Cancel"
+        android:onClick="Btn_Create"/>
 
 </RelativeLayout>
