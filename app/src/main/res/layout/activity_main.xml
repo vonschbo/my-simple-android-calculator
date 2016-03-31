@@ -248,4 +248,17 @@
         android:layout_toEndOf="@+id/button_Cancel"
         android:onClick="Btn_Create"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/button"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:onClick="getResult"
+        android:layout_alignTop="@+id/button_div"
+        android:layout_toRightOf="@+id/button_div"
+        android:layout_toEndOf="@+id/button_div" />
+
 </RelativeLayout>
