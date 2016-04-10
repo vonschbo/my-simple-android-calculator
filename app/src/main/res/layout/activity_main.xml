@@ -261,4 +261,16 @@
         android:layout_toRightOf="@+id/button_div"
         android:layout_toEndOf="@+id/button_div" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="^"
+        android:id="@+id/button_pow"
+        android:textStyle="bold"
+        android:onClick="Btn_Create"
+        android:layout_alignTop="@+id/button_Minus"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
 </RelativeLayout>
