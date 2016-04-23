@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
     //press the button and create the value in the EditText Unfinished
     //https://www.youtube.com/watch?v=_sodmekXeDY
     public void Btn_Create(View sender){
-        if(editText.getText().length()>8)return;
+        if(textView.getText().length()>8)return;
         Button bt = (Button)sender;
-        editText.setText(bt.getText());
+        textView.setText(bt.getText());
     }
 }
