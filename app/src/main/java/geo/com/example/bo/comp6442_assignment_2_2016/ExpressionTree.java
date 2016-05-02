@@ -46,7 +46,7 @@ public class ExpressionTree {
         return node;
     }
 
-
+//the position of string is int
     int findMatchingRightParen (String s, int leftPos)
     {
         Stack<Character> stack = new Stack<Character>();
