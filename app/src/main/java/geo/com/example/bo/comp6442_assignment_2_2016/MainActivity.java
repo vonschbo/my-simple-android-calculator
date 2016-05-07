@@ -60,6 +60,6 @@ public class MainActivity extends AppCompatActivity {
     //press "="
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();
-        textView.setText((""+pt.evaluate(editText.getText().toString())));
+        textView.setText(("The result is"+pt.evaluate(editText.getText().toString())));
     }
 }

@@ -25,7 +25,9 @@
         android:gravity="right"
         android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:cursorVisible="false"
+        android:backgroundTint="@android:color/holo_green_light"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
