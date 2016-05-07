@@ -18,6 +18,7 @@ public class ParserTreeNew extends ParserBase {
 
     @Override
     public double evaluate(String s) throws ParserException {
+        //for unary number like "-1"
         if(s.charAt(0)=='-'){
             String s1 = s.substring(1,s.length());
             return Double.parseDouble("-"+s1);
