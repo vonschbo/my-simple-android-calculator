@@ -12,12 +12,16 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private float pressBF;
     private String Operation;
+    String total = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         editText = (EditText)findViewById(R.id.editText);
+        textView = (TextView)findViewById(R.id.textView);
+        textView.setText("0");
 
         int BtList[] = {R.id.button0,R.id.button1,R.id.button2,R.id.button3,
                 R.id.button4,R.id.button5,R.id.button6,
@@ -26,17 +30,30 @@ public class MainActivity extends AppCompatActivity {
                 R.id.button_multi,R.id.button_plus,
                 R.id.button_leftBr,R.id.button_RightBr,};
 
-        for(int Btid : BtList){
-            View view = (View)findViewById(Btid);
-
-        }
+//        for(int Btid : BtList){
+//            View view = (View)findViewById(Btid);
+//        }
     }
 
     //press the button and create the value in the EditText Unfinished
-    //https://www.youtube.com/watch?v=_sodmekXeDY
     public void Btn_Create(View sender){
-        if(textView.getText().length()>8)return;
         Button bt = (Button)sender;
+        String str = bt.getText().toString();
+        total += str;
+        editText.setText(total);
+        if(editText.getText().length()>8)return;
         textView.setText(bt.getText());
+    }
+
+    //press "C"
+    public void cleanData(View view){
+        editText.getText().clear();
+        //editText.setText("");
+    }
+
+    //press "="
+    public void getResult(View view) throws ParserException {
+        ParserTreeNew pt = new ParserTreeNew();
+        textView.setText((""+pt.evaluate(editText.getText().toString())));
     }
 }

@@ -198,7 +198,7 @@
         android:layout_alignTop="@+id/button3"
         android:layout_toRightOf="@+id/button3"
         android:layout_toEndOf="@+id/button3"
-        android:onClick="Btn_Create"/>
+        android:onClick="cleanData"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
