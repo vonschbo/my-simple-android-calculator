@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         //editText.setText("");
     }
 
+    //press "<=",deletLast input
+    public void Btn_Back(View view){
+        String text = editText.getText().toString();
+        editText.setText(text.substring(0, text.length() - 1));
+    }
+
     //press "="
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();

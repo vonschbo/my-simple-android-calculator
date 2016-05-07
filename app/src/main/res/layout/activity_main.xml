@@ -273,4 +273,16 @@
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;="
+        android:id="@+id/button_back"
+        android:textStyle="bold"
+        android:onClick="Btn_Back"
+        android:layout_below="@+id/button0"
+        android:layout_alignLeft="@+id/button0"
+        android:layout_alignStart="@+id/button0" />
+
 </RelativeLayout>
