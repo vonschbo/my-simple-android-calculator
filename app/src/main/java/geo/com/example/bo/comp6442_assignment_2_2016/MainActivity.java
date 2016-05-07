@@ -7,6 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ *
+ * @author Bo and Xiaochen
+ *
+ */
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private TextView textView;
