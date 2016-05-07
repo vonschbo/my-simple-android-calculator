@@ -171,10 +171,10 @@
         android:text="*"
         android:id="@+id/button_multi"
         android:textStyle="bold"
-        android:layout_alignTop="@+id/button_dot"
-        android:layout_toRightOf="@+id/button_dot"
-        android:layout_toEndOf="@+id/button_dot"
-        android:onClick="Btn_Create"/>
+        android:onClick="Btn_Create"
+        android:layout_below="@+id/button5"
+        android:layout_toRightOf="@+id/button9"
+        android:layout_toEndOf="@+id/button9" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -183,11 +183,11 @@
         android:text="/"
         android:id="@+id/button_div"
         android:textStyle="bold"
-        android:layout_alignBottom="@+id/button_multi"
-        android:layout_toRightOf="@+id/button_multi"
-        android:layout_toEndOf="@+id/button_multi"
         android:singleLine="false"
-        android:onClick="Btn_Create"/>
+        android:onClick="Btn_Create"
+        android:layout_below="@+id/button_plus"
+        android:layout_toRightOf="@+id/button_plus"
+        android:layout_toEndOf="@+id/button_plus" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -259,21 +259,9 @@
         android:textStyle="bold"
         android:singleLine="false"
         android:onClick="getResult"
-        android:layout_alignTop="@+id/button_div"
-        android:layout_toRightOf="@+id/button_div"
-        android:layout_toEndOf="@+id/button_div" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="^"
-        android:id="@+id/button_pow"
-        android:textStyle="bold"
-        android:onClick="Btn_Create"
-        android:layout_alignTop="@+id/button_Minus"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_below="@+id/button_div"
+        android:layout_alignLeft="@+id/button_div"
+        android:layout_alignStart="@+id/button_div" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -283,8 +271,8 @@
         android:id="@+id/button_back"
         android:textStyle="bold"
         android:onClick="Btn_Back"
-        android:layout_below="@+id/button0"
-        android:layout_alignLeft="@+id/button0"
-        android:layout_alignStart="@+id/button0" />
+        android:layout_above="@+id/button_Cancel"
+        android:layout_toRightOf="@+id/button_Cancel"
+        android:layout_toEndOf="@+id/button_Cancel" />
 
 </RelativeLayout>
