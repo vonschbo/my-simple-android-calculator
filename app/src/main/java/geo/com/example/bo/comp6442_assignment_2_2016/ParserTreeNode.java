@@ -50,13 +50,4 @@ public class ParserTreeNode {
         System.out.print(tree.value.toString() + " ");
     }
 
-    public boolean isValueDouble()
-    {
-        String s = value.toString();
-
-        for (int i = 0; i < s.length(); i++)
-            if ( !( (s.charAt(i) >= '0' && s.charAt(i) <= '9') || s.charAt(i) == '.') )
-                return false;
-        return true;
-    }
 }

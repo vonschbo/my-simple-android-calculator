@@ -9,7 +9,7 @@ import java.util.Stack;
  * This is the base class for all parsers - they must provide the implementation
  * for evaluate(). Also provides some helper functions.
  *
- * @author Sunshine2k
+ * @author Bo and Sunshine2k
  */
 public abstract class ParserBase {
 
