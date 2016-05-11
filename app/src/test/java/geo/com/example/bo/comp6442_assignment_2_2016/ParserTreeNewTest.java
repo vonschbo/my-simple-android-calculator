@@ -10,6 +10,8 @@ import static org.junit.Assert.assertTrue;
  * Created by Bo on 11/05/2016.
  */
 public class ParserTreeNewTest {
+
+    //test basic number
     @Test
     public void testBasicOPEva() throws Exception{
         ParserTreeNew t = new ParserTreeNew();
@@ -19,6 +21,7 @@ public class ParserTreeNewTest {
         assertTrue(t.evaluate("2221")==2221.0);
     }
 
+    //test basic plus and minus
     @Test
     public void testPM() throws Exception{
         ParserTreeNew t = new ParserTreeNew();
@@ -30,6 +33,7 @@ public class ParserTreeNewTest {
         assertTrue(t.evaluate("2-5+7")==4.0);
     }
 
+    //test expressions
     @Test
     public void testM() throws Exception{
         ParserTreeNew t = new ParserTreeNew();

@@ -10,6 +10,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class ParserTreeBaseTest {
 
+    //test the remove space method
     @Test
     public void testSpace() throws Exception {
         ParserTreeNew t = new ParserTreeNew();
