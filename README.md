@@ -1,5 +1,7 @@
 # ANU COMP6442 second assignment, 2016
 
+### Author: Bo (u5495054), Xiaochen Dou 
+
 ## about our project:
 This assignment involves developing a calculator app. The basic features required are:
 
