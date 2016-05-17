@@ -50,21 +50,21 @@ public class MainActivity extends AppCompatActivity {
         //textView.setText(bt.getText());
     }
 
-    //press "C"
+    //press "C", clear all the input history
     public void cleanData(View view){
         //editText.getText().clear();
         editText.setText("");
         total = "";
     }
 
-    //press "<=",deletLast input
+    //press "back",move back to modify the input
     public void Btn_Back(View view){
         String text = editText.getText().toString();
         editText.setText(total.substring(0, text.length() - 1));
 
     }
 
-    //press "="
+    //press "=", show the expression result
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();
         textView.setText(("The result is: "+pt.evaluate(editText.getText().toString())));
