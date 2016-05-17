@@ -18,5 +18,9 @@ public class ParserTreeBaseTest {
         String s2 = "1+1*55";
         //assertTrue(t.deleteSpaces(s1)==s2);
         assertEquals(t.deleteSpaces(s1),s2);
+        assertEquals(t.deleteSpaces("  55"),"55");
+        assertEquals(t.deleteSpaces(" -   1"),"-1");
+        assertEquals(t.deleteSpaces("1   *  22"),"1*22");
+        assertEquals(t.deleteSpaces(" (  22  + 1 )  / 3"),"(22+1)/3");
     }
 }
