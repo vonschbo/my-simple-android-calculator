@@ -16,6 +16,8 @@
         android:id="@+id/textView"
         android:gravity="right"
         android:height="40dp"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-medium"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -290,5 +292,17 @@
         android:layout_alignLeft="@+id/button0"
         android:layout_alignStart="@+id/button0"
         android:layout_alignParentBottom="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/button_clearSaved"
+        android:textStyle="bold"
+        android:onClick="clearSaved"
+        android:layout_above="@+id/button3"
+        android:layout_toLeftOf="@+id/button_back"
+        android:layout_toStartOf="@+id/button_back" />
 
 </RelativeLayout>

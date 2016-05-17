@@ -2,7 +2,10 @@ package geo.com.example.bo.comp6442_assignment_2_2016;
 
 /**
  * Created by Bo on 7/05/2016.
- * @author Bo and Xiaochen
+ *
+ * This class is to create the basic tree structure.
+ *
+ * @author Bo
  *
  */
 

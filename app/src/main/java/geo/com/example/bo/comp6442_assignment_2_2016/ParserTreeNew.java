@@ -1,10 +1,11 @@
 package geo.com.example.bo.comp6442_assignment_2_2016;
 
-/**
- * @author Bo and Xiaochen
+/** This is the parser for evaluate expression
+ * @author Bo
  */
-/** We make modification with this Reference
- * This class extends a normal excpetion to our specific parserexception.
+/** I make modification with this Reference for the assignment, all codes are typed by myself
+ *
+ * The tutorial I reference: I think it is a good introduction on how to create a parser
  * @author Sunshine2k: http://www.sunshine2k.de/coding/java/SimpleParser/SimpleParser.html
  */
 public class ParserTreeNew extends ParserBase {

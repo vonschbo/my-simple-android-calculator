@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 
 /**
  *
- * @author Bo and Xiaochen
+ * @author Bo
  *
  */
 public class MainActivity extends AppCompatActivity {
@@ -103,12 +103,12 @@ public class MainActivity extends AppCompatActivity {
     //press "=", show the expression result
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();
-        textView.setText(("The result is: "+pt.evaluate(editText.getText().toString())));
+        textView.setText((""+pt.evaluate(editText.getText().toString())));
 
         //save the text persistent
         String textBuffer = textSaved.getText().toString();
         String appendText = editText.getText().toString();
-        textBuffer += "..";
+        textBuffer += ":";
         textBuffer += appendText;
         String exp = textBuffer+ " = "+ pt.evaluate(editText.getText().toString()) +"\n";
         try {
@@ -123,12 +123,17 @@ public class MainActivity extends AppCompatActivity {
         total = "";
     }
 
+//clear the input history
+    public void clearSaved(View view){
+        textSaved.setText("");
+    }
+
 
     //save the text expression
     public void saveText(View view){
         String textBuffer = textSaved.getText().toString();
         String appendText = editText.getText().toString();
-        textBuffer += "..";
+        textBuffer += ":";
         textBuffer += appendText;
         try {
             outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
