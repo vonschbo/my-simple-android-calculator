@@ -1,11 +1,20 @@
 package geo.com.example.bo.comp6442_assignment_2_2016;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 
 /**
  *
@@ -18,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     private float pressBF;
     private String Operation;
     String total = "";
+    FileInputStream inputStream;
+    FileOutputStream outputStream;
+    File persistentFile;
+    static final String filename = "MyCalculator";
+    TextView textSaved;
+
 
 
     @Override
@@ -27,6 +42,26 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText)findViewById(R.id.editText);
         textView = (TextView)findViewById(R.id.textView);
         textView.setText("0");
+        textSaved = (TextView)findViewById(R.id.saved_textView);
+
+
+        /* Read data from the persistent file */
+        persistentFile = new File(getFilesDir(),filename);
+        if (persistentFile.exists()){
+            try{
+                inputStream = openFileInput(filename);
+                BufferedReader input = new BufferedReader(new InputStreamReader(inputStream));
+                String line;
+                StringBuilder buffer = new StringBuilder();
+                while ((line = input.readLine()) != null){
+                    buffer.append(line);
+                }
+                textSaved.setText(buffer.toString());
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
 
         int BtList[] = {R.id.button0,R.id.button1,R.id.button2,R.id.button3,
                 R.id.button4,R.id.button5,R.id.button6,
@@ -69,6 +104,40 @@ public class MainActivity extends AppCompatActivity {
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();
         textView.setText(("The result is: "+pt.evaluate(editText.getText().toString())));
+
+        //save the text persistent
+        String textBuffer = textSaved.getText().toString();
+        String appendText = editText.getText().toString();
+        textBuffer += "..";
+        textBuffer += appendText;
+        String exp = textBuffer+ " = "+ pt.evaluate(editText.getText().toString()) +"\n";
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(exp.getBytes());
+            outputStream.close();
+            textSaved.setText(exp);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
         total = "";
     }
+
+
+    //save the text expression
+    public void saveText(View view){
+        String textBuffer = textSaved.getText().toString();
+        String appendText = editText.getText().toString();
+        textBuffer += "..";
+        textBuffer += appendText;
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(textBuffer.getBytes());
+            outputStream.close();
+            textSaved.setText(textBuffer);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
 }

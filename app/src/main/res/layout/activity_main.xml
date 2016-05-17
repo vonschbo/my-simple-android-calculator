@@ -17,9 +17,8 @@
         android:gravity="right"
         android:height="40dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="44dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
@@ -29,7 +28,6 @@
         android:gravity="right"
         android:cursorVisible="false"
         android:backgroundTint="@android:color/holo_green_light"
-        android:layout_marginTop="62dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -280,5 +278,17 @@
         android:layout_above="@+id/button_Cancel"
         android:layout_toRightOf="@+id/button_Cancel"
         android:layout_toEndOf="@+id/button_Cancel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Show the saved expression and result"
+        android:id="@+id/saved_textView"
+        android:layout_below="@+id/button0"
+        android:layout_alignRight="@+id/button_Minus"
+        android:layout_alignEnd="@+id/button_Minus"
+        android:layout_alignLeft="@+id/button0"
+        android:layout_alignStart="@+id/button0"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
