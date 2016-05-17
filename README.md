@@ -21,6 +21,6 @@ This assignment involves developing a calculator app. The basic features require
  
  Press the "=" button, you will see the result evaluated.
  
- ## Reference:
+## Reference:
 A tutorial about parsing algorithm:
 http://www.sunshine2k.de/coding/java/SimpleParser/SimpleParser.html
