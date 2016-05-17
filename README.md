@@ -13,7 +13,7 @@ This assignment involves developing a calculator app. The basic features require
 
 * The expression parsing algorithm must use a recursive data structure such as a Tree
 
-####Extensions:
+#### Extensions:
 
 * Buttons (numbers, operators) to assist users in entering expressions.
 
