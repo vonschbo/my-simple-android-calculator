@@ -93,9 +93,12 @@ public class MainActivity extends AppCompatActivity {
     //press "back",move back to modify the input
     public void Btn_Back(View view){
         String text = editText.getText().toString();
-        total = total.substring(0, text.length() - 1);
-        editText.setText(total);
-
+        if(total=="")
+            editText.setText(total);
+        else {
+            total = total.substring(0, text.length() - 1);
+            editText.setText(total);
+        }
     }
 
     //press "=", show the expression result
