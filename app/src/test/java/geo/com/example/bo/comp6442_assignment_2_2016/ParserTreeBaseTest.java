@@ -13,7 +13,7 @@ public class ParserTreeBaseTest {
     //test the remove space method
     @Test
     public void testSpace() throws Exception {
-        ParserTreeNew t = new ParserTreeNew();
+        ParserTree t = new ParserTree();
         String s1 = "1 +   1 * 55";
         String s2 = "1+1*55";
         //assertTrue(t.deleteSpaces(s1)==s2);

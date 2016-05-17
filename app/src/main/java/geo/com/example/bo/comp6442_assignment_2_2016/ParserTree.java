@@ -8,7 +8,7 @@ package geo.com.example.bo.comp6442_assignment_2_2016;
  * The tutorial I reference: I think it is a good introduction on how to create a parser
  * @author Sunshine2k: http://www.sunshine2k.de/coding/java/SimpleParser/SimpleParser.html
  */
-public class ParserTreeNew extends ParserBase {
+public class ParserTree extends ParserBase {
 
     private String term;		// term to evaluate
     private int currentTermPos;		// char position in term
@@ -28,7 +28,7 @@ public class ParserTreeNew extends ParserBase {
 
             term = deleteSpaces(s);
 
-            ParserTreeNode rootNode = parseAddSub();
+            TreeNode rootNode = parseAddSub();
 
             return evaluateParserTree(rootNode);
         }
@@ -100,21 +100,21 @@ public class ParserTreeNew extends ParserBase {
      * @return
      * @throws ParserException
      */
-    private ParserTreeNode parseMulDiv() throws ParserException
+    private TreeNode parseMulDiv() throws ParserException
     {
-        ParserTreeNode rootNode = parseSimpleTerm();
+        TreeNode rootNode = parseSimpleTerm();
         TokenType nextToken = getNextTokenType();
 
         while (nextToken == TokenType.MULTIPY || nextToken == TokenType.DIVIDE)
         {
-            ParserTreeNode newRootNode;
+            TreeNode newRootNode;
             if (nextToken == TokenType.MULTIPY)
             {
-                newRootNode = new ParserTreeNode('*');
+                newRootNode = new TreeNode('*');
             }
             else
             {
-                newRootNode = new ParserTreeNode('/');
+                newRootNode = new TreeNode('/');
             }
 
             // previous root node becomes new left tree
@@ -135,21 +135,21 @@ public class ParserTreeNew extends ParserBase {
      * @return
      * @throws ParserException
      */
-    private ParserTreeNode parseAddSub() throws ParserException
+    private TreeNode parseAddSub() throws ParserException
     {
-        ParserTreeNode rootNode = parseMulDiv();
+        TreeNode rootNode = parseMulDiv();
         TokenType nextToken = getNextTokenType();
 
         while (nextToken == TokenType.PLUS || nextToken == TokenType.MINUS)
         {
-            ParserTreeNode newRootNode;
+            TreeNode newRootNode;
             if (nextToken == TokenType.PLUS)
             {
-                newRootNode = new ParserTreeNode('+');
+                newRootNode = new TreeNode('+');
             }
             else
             {
-                newRootNode = new ParserTreeNode('-');
+                newRootNode = new TreeNode('-');
             }
             // previous root node becomes new left tree
             newRootNode.leftTree = rootNode;
@@ -168,14 +168,14 @@ public class ParserTreeNew extends ParserBase {
      * @return
      * @throws ParserException
      */
-    private ParserTreeNode parseSimpleTerm() throws ParserException
+    private TreeNode parseSimpleTerm() throws ParserException
     {
         TokenType nextToken = getNextTokenType();
-        ParserTreeNode rootNode = null;
+        TreeNode rootNode = null;
         if (nextToken == TokenType.NUMBER)
         {
             double num = extractNextNumber();
-            rootNode = new ParserTreeNode(num);
+            rootNode = new TreeNode(num);
         }
         else if (nextToken == TokenType.OPENING_BRACKET)
         {
@@ -229,7 +229,7 @@ public class ParserTreeNew extends ParserBase {
      * Calls itself recursive. Throws NumberFormat exception.
      * @param tree: the root node of the parser tree
      */
-    private double evaluateParserTree(ParserTreeNode tree)
+    private double evaluateParserTree(TreeNode tree)
     {
         if (tree == null)
             return Double.NaN;
@@ -248,7 +248,7 @@ public class ParserTreeNew extends ParserBase {
     }
 
     public static void main(String[] args) throws ParserException {
-        ParserTreeNew pt = new ParserTreeNew();
+        ParserTree pt = new ParserTree();
         System.out.println(pt.evaluate("(1+2)*6"));
         System.out.println(pt.evaluate("(2 + 3*4/5*(10*4))"));
         System.out.println(pt.evaluate("(1+2)*6"));

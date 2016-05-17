@@ -4,10 +4,8 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -102,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
     //press "=", show the expression result
     public void getResult(View view) throws ParserException {
-        ParserTreeNew pt = new ParserTreeNew();
+        ParserTree pt = new ParserTree();
         textView.setText((""+pt.evaluate(editText.getText().toString())));
 
         //save the text persistent
@@ -169,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
     public int count(String y,String x){
         int counter = 0;
         for( int i=0; i<x.length(); i++ ) {
-            if( x.charAt(i) == 'y' ) {
+            if(x.charAt(i) == y.charAt(0)) {
                 counter++;
             }
         }

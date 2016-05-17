@@ -14,7 +14,7 @@ public class ParserTreeNewTest {
     //test basic number
     @Test
     public void testBasicOPEva() throws Exception{
-        ParserTreeNew t = new ParserTreeNew();
+        ParserTree t = new ParserTree();
         assertFalse(t.evaluate("-1")==1);
         assertTrue(t.evaluate("-1") == -1.0);
         assertTrue(t.evaluate("2") == 2.0);
@@ -24,7 +24,7 @@ public class ParserTreeNewTest {
     //test basic plus and minus
     @Test
     public void testPM() throws Exception{
-        ParserTreeNew t = new ParserTreeNew();
+        ParserTree t = new ParserTree();
         assertTrue(t.evaluate("2+2")==4.0);
         assertTrue(t.evaluate("99-18")==81.0);
         assertTrue(t.evaluate("55-0") == 55.0);
@@ -36,7 +36,7 @@ public class ParserTreeNewTest {
     //test expressions
     @Test
     public void testM() throws Exception{
-        ParserTreeNew t = new ParserTreeNew();
+        ParserTree t = new ParserTree();
         assertTrue(t.evaluate("2*2")==4.0);
         assertTrue(t.evaluate("99/18")==5.5);
         assertTrue(t.evaluate("(2+3)/5")==1.0);

@@ -9,33 +9,33 @@ package geo.com.example.bo.comp6442_assignment_2_2016;
  *
  */
 
-public class ParserTreeNode {
+public class TreeNode {
 
-    public ParserTreeNode   leftTree;
-    public ParserTreeNode   rightTree;
+    public TreeNode leftTree;
+    public TreeNode rightTree;
     public Object           value;
 
-    public ParserTreeNode(ParserTreeNode l, ParserTreeNode r, Object v)
+    public TreeNode(TreeNode l, TreeNode r, Object v)
     {
         leftTree = l;
         rightTree = r;
         value = v;
     }
 
-    public ParserTreeNode(Object l, Object r, Object v)
+    public TreeNode(Object l, Object r, Object v)
     {
-        leftTree = new ParserTreeNode(l);
-        rightTree = new ParserTreeNode(r);
+        leftTree = new TreeNode(l);
+        rightTree = new TreeNode(r);
         value = v;
     }
 
-    public ParserTreeNode()
+    public TreeNode()
     {
         leftTree = rightTree = null;
         value = null;
     }
 
-    public ParserTreeNode(Object v)
+    public TreeNode(Object v)
     {
         leftTree = rightTree = null;
         value = v;
@@ -47,7 +47,7 @@ public class ParserTreeNode {
         System.out.println();
     }
 
-    private void printTreePostOrder(ParserTreeNode tree)
+    private void printTreePostOrder(TreeNode tree)
     {
         if (tree == null)
             return;
