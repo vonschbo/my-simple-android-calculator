@@ -15,7 +15,11 @@
         android:hint="Show the reesult"
         android:id="@+id/textView"
         android:gravity="right"
-        android:height="40dp" />
+        android:height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="44dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -23,11 +27,12 @@
         android:id="@+id/editText"
         android:hint="Enter data here"
         android:gravity="right"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:cursorVisible="false"
-        android:backgroundTint="@android:color/holo_green_light"/>
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -221,10 +226,10 @@
         android:text="-"
         android:id="@+id/button_Minus"
         android:textStyle="bold"
-        android:layout_below="@+id/button_plus"
-        android:layout_alignLeft="@+id/button_div"
-        android:layout_alignStart="@+id/button_div"
-        android:onClick="Btn_Create"/>
+        android:onClick="Btn_Create"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -260,8 +265,9 @@
         android:singleLine="false"
         android:onClick="getResult"
         android:layout_below="@+id/button_div"
-        android:layout_alignLeft="@+id/button_div"
-        android:layout_alignStart="@+id/button_div" />
+        android:layout_alignParentEnd="false"
+        android:layout_alignLeft="@+id/button_multi"
+        android:layout_alignStart="@+id/button_multi" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
