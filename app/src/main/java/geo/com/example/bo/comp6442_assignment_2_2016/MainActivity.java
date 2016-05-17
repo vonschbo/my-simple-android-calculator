@@ -47,24 +47,27 @@ public class MainActivity extends AppCompatActivity {
         total += str;
         editText.setText(total);
         if(editText.getText().length()>8)return;
-        textView.setText(bt.getText());
+        //textView.setText(bt.getText());
     }
 
     //press "C"
     public void cleanData(View view){
-        editText.getText().clear();
-        //editText.setText("");
+        //editText.getText().clear();
+        editText.setText("");
+        total = "";
     }
 
     //press "<=",deletLast input
     public void Btn_Back(View view){
         String text = editText.getText().toString();
-        editText.setText(text.substring(0, text.length() - 1));
+        editText.setText(total.substring(0, text.length() - 1));
+
     }
 
     //press "="
     public void getResult(View view) throws ParserException {
         ParserTreeNew pt = new ParserTreeNew();
-        textView.setText(("The result is"+pt.evaluate(editText.getText().toString())));
+        textView.setText(("The result is: "+pt.evaluate(editText.getText().toString())));
+        total = "";
     }
 }
