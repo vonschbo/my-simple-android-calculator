@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     File persistentFile;
     static final String filename = "MyCalculator";
     TextView textSaved;
+    String syntaxHelper = "";
 
 
 
@@ -143,4 +145,34 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //check syntax error
+    public void check(View view){
+        syntaxHelper = "";
+        String t = editText.getText().toString();
+        if(t.contains("(*"))
+            syntaxHelper += "* can not begin with (";
+        if(t.contains("(/"))
+            syntaxHelper += "/ can not begin with (";
+        if(t.contains("(+"))
+            syntaxHelper += "+ can not begin with ( ";
+        if(t.contains("/0"))
+            syntaxHelper += "0 can not be divided";
+        if(count("(",t)!=count(")",t))
+            syntaxHelper += "brackets missing";
+
+        Toast.makeText(this, syntaxHelper, Toast.LENGTH_LONG).show();
+
+    }
+
+
+    //count the character occurrences
+    public int count(String y,String x){
+        int counter = 0;
+        for( int i=0; i<x.length(); i++ ) {
+            if( x.charAt(i) == 'y' ) {
+                counter++;
+            }
+        }
+        return counter;
+    }
 }
