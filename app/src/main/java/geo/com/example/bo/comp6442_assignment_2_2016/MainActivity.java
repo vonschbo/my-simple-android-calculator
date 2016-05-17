@@ -24,8 +24,6 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private TextView textView;
-    private float pressBF;
-    private String Operation;
     String total = "";
     FileInputStream inputStream;
     FileOutputStream outputStream;
