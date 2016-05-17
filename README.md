@@ -29,7 +29,7 @@ This assignment involves developing a calculator app. The basic features require
  
  you can view and modify any changes you want in the expression.
  
- At the end of the input bar, "/?" button indicates to check the simple syntax error appears in the expression user entered.
+ At the end of the input bar, "/?" button indicates to check the simple syntax error appears in the expression user entered, a toaster will appear.
  
  Every time the user press "=", the result of the expression will be given, and also saved to the textview under the button.
  
