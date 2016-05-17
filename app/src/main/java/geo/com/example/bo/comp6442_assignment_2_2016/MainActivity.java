@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
 //clear the input history
     public void clearSaved(View view){
         textSaved.setText("");
+        persistentFile.delete();
     }
 
 
@@ -173,4 +174,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return counter;
     }
+
+
 }
