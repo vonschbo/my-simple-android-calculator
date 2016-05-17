@@ -1,6 +1,6 @@
 package geo.com.example.bo.comp6442_assignment_2_2016;
 
-/**
+/** Claim the exception when parsing
  * @author Bo and Xiaochen
  */
 public class ParserException extends Exception {
