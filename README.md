@@ -20,3 +20,7 @@ This assignment involves developing a calculator app. The basic features require
  you can view and modify any changes you want in the expression.
  
  Press the "=" button, you will see the result evaluated.
+ 
+ ## Reference:
+A tutorial about parsing algorithm:
+http://www.sunshine2k.de/coding/java/SimpleParser/SimpleParser.html
