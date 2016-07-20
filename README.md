@@ -1,4 +1,4 @@
-# ANU COMP6442 second assignment, 2016
+# ANU xxxx second assignment, 2016
 
 ### Author: Bo (u5495054)
 
