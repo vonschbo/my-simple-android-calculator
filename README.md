@@ -2,7 +2,7 @@
 
 ### Author: Bo (u5495054)
 
-## about our project:
+## about my project:
 This assignment involves developing a calculator app. The basic features required are:
 
 * A single text entry field where users may enter mathematical expressions such as (2 + 3*4/5*(10*4))
